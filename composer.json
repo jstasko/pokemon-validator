@@ -1,5 +1,5 @@
 {
-    "name": "validator/pokemon-validator",
+    "name": "pokemonValidator/pokemon-validator",
     "description": "My validator for pokemon api",
     "authors": [
         {
