@@ -6,7 +6,7 @@
  * Time: 11:33
  */
 
-namespace Validation;
+namespace ValidatorPokemon;
 
 
 class NotFoundException extends \Exception
