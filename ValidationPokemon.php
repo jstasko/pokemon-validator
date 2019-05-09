@@ -5,7 +5,9 @@
  * Date: 2019-05-02
  * Time: 19:06
  */
+
 namespace ValidatorPokemon;
+
 class ValidationPokemon
 {
     /**
