@@ -1,0 +1,19 @@
+{
+    "name": "pokemon-validator/pokemon-validator",
+    "description": "My validator for pokemon api",
+    "authors": [
+        {
+            "name": "Jozef Stasko",
+            "email": "stasko.jozef427@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Validation": "/"
+        }
+    }
+}

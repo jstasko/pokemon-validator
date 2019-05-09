@@ -16,6 +16,7 @@ class ValidationPokemon
     {
         return preg_replace('/\s+/', ' ', $str);
     }
+
     /**
      * @param array $pokemonAttributes
      * @return array
