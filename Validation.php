@@ -6,12 +6,9 @@
  * Time: 19:06
  */
 
-namespace Validation;
+namespace ValidatorPokemon;
 
-
-use Validation\NotFoundException;
-
-class Validation
+class ValidationPokemon
 {
     /**
      * @param string $str
@@ -43,6 +40,26 @@ class Validation
         throw new NotFoundException('Pokemon was not found');
     }
 
+    public static function checkIfExistsEvolChain(array $evolution): array
+    {
+        $arr = [];
+
+        $arr[] = isset($evolution['chain']['species']['name']) ? $evolution['chain']['species']['name']: null;
+        $arr[] = isset($evolution['chain']['evolves_to'][0]['species']['name']) ? $evolution['chain']['evolves_to'][0]['species']['name']: null;
+        $arr[] = isset($evolution['chain']['evolves_to'][0]['evolves_to'][0]['species']['name']) ?$evolution['chain']['evolves_to'][0]['evolves_to'][0]['species']['name'] : null;
+        return $arr;
+    }
+
+    public static function getRidOfPokemonByName(array $arr, string $str): array
+    {
+        $newArr = [];
+        foreach ($arr as $el) {
+            if (strcmp($el, $str) !== 0) {
+                $newArr[] = $el;
+            }
+        }
+        return array_filter($newArr);
+    }
     /**
      * @param array $abilities
      * @return array
